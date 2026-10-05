@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Someone Special ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =================================================
+         MUSIC
+    ================================================== -->
+
+    <audio id="birthdayMusic" loop>
+        <source src="music/birthday.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =================================================
+         OPENING
+    ================================================== -->
+
+    <section id="opening" class="page active">
+
+        <!-- BUNGA JATUH -->
+        <div id="flowerRain"></div>
+
+        <!-- BACKGROUND STARS -->
+        <div class="stars"></div>
+
+
+        <!-- HIRONO KIRI -->
+
+        <div class="hirono-decor hirono-left">
+            <img src="https://prod-america-res.popmart.com/default/20250620_181624_684588____1_hirono-living-wild-fight-for-joy-plush-doll_plush-toys_-details_popmart-us_____1200x1200.jpg" alt="Hirono">
+        </div>
+
+
+        <!-- HIRONO KANAN -->
+
+        <div class="hirono-decor hirono-right">
+            <img src="https://i.pinimg.com/736x/d6/36/72/d63672ad043380aa45bd1c4c5157d3b8.jpg" alt="Hirono">
+        </div>
+
+
+        <div class="opening-content">
+
+            <p class="mini-text">
+                A LITTLE SURPRISE FOR YOU
+            </p>
+
+            <h1>
+                Her Special
+                <br>
+                <span>Day Is Coming</span>
+            </h1>
+
+            <p class="opening-description">
+                Something special has been prepared
+                <br>
+                just for you.
+            </p>
+
+
+            <!-- COUNTDOWN -->
+
+            <div class="countdown">
+
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <small>DAYS</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <small>HOURS</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <small>MINUTES</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <small>SECONDS</small>
+                </div>
+
+            </div>
+
+
+            <button class="start-button" onclick="startSurprise()">
+                OPEN YOUR SURPRISE
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         GIFT PAGE
+    ================================================== -->
+
+    <section id="giftPage" class="page hidden">
+
+        <div id="flowerRainGift"></div>
+
+        <div class="gift-hirono">
+            <img src="https://wallpapercave.com/wp/wp13689089.jpg" alt="Hirono">
+        </div>
+
+
+        <div class="gift-container">
+
+            <p class="mini-text">
+                A LITTLE GIFT
+            </p>
+
+            <h2>
+                Something
+                <br>
+                <span>for you...</span>
+            </h2>
+
+
+            <!-- GIFT -->
+
+            <div class="gift" onclick="openGift()">
+
+                <div class="gift-lid"></div>
+
+                <div class="gift-box"></div>
+
+                <div class="gift-ribbon vertical"></div>
+
+                <div class="gift-ribbon horizontal"></div>
+
+                <div class="bow left"></div>
+
+                <div class="bow right"></div>
+
+            </div>
+
+
+            <p class="click-text">
+                Click the gift to open
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         BIRTHDAY PAGE
+    ================================================== -->
+
+    <section id="birthdayPage" class="page hidden">
+
+        <div id="flowerRainBirthday"></div>
+
+
+        <div class="birthday-hirono">
+            <img src="https://i.pinimg.com/736x/ac/6d/2d/ac6d2d8007d88b18c2d1118d9217cacb.jpg" alt="Hirono">
+        </div>
+
+
+        <div class="birthday-content">
+
+            <p class="mini-text">
+                TODAY IS YOUR DAY
+            </p>
+
+
+            <h1>
+                Happy
+                <span>Birthday</span>
+            </h1>
+
+
+            <div class="birthday-line"></div>
+
+
+            <p class="birthday-name">
+                Dear <strong>Someone Special</strong> ❤️
+            </p>
+
+
+            <div class="letter">
+
+                <p>
+                    Selamat ulang tahun untuk seseorang
+                    yang sangat spesial.
+                </p>
+
+
+                <p>
+                    Hari ini adalah hari yang istimewa,
+                    karena hari ini adalah hari dimana
+                    seseorang yang begitu berarti hadir
+                    ke dunia.
+                </p>
+
+
+                <p>
+                    Semoga di usia yang baru ini,
+                    semua hal baik datang kepadamu.
+                    Semoga kamu selalu diberikan kesehatan,
+                    kebahagiaan, kesuksesan, dan ketenangan
+                    dalam setiap langkahmu.
+                </p>
+
+
+                <p>
+                    Jangan pernah berhenti bermimpi.
+                    Jangan pernah berhenti menjadi dirimu sendiri.
+                    Karena kamu jauh lebih berharga daripada
+                    yang kamu sadari.
+                </p>
+
+
+                <p class="letter-ending">
+                    Once again...
+                    <br>
+                    <strong>Happy Birthday ❤️</strong>
+                </p>
+
+            </div>
+
+
+            <button class="next-button" onclick="showMemories()">
+                OUR MEMORIES →
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         MEMORIES PAGE
+    ================================================== -->
+
+    <section id="memoriesPage" class="page hidden">
+
+        <div id="flowerRainMemories"></div>
+
+
+        <!-- HIRONO SAMPING -->
+
+        <div class="memory-hirono memory-hirono-left">
+            <img src="https://i.pinimg.com/originals/6a/ad/43/6aad43bb100f16ff5e83ed65dfc2a074.jpg" alt="Hirono">
+        </div>
+
+
+        <div class="memory-hirono memory-hirono-right">
+            <img src="https://i.pinimg.com/736x/7d/43/25/7d43254f80f8c5875778f0e1bfa5df33.jpg" alt="Hirono">
+        </div>
+
+
+        <div class="memories-content">
+
+            <p class="mini-text">
+                A COLLECTION OF MEMORIES
+            </p>
+
+
+            <h2>
+                Little Moments,
+                <br>
+                <span>Big Memories.</span>
+            </h2>
+
+
+            <!-- 9 FOTO -->
+
+            <div class="photo-grid">
+
+
+                <!-- FOTO 1 -->
+                 
+
+<div class="photo photo-one">
+
+    <img src="foto1.jpg.jpeg" 
+        alt="Memory 1">
+
+    <div class="photo-number">
+        01
+    </div>
+
+</div>
+
+
+<!-- FOTO 2 -->
+
+<div class="photo photo-two">
+
+    <img src="foto2.jpg.jpeg" 
+        alt="Memory 2">
+
+    <div class="photo-number">
+        02
+    </div>
+
+</div>
+
+
+<!-- FOTO 3 -->
+
+<div class="photo photo-three">
+
+    <img src="foto3.jpg.jpeg" 
+        alt="Memory 3">
+
+    <div class="photo-number">
+        03
+    </div>
+
+</div>
+
+
+<!-- FOTO 4 -->
+
+<div class="photo photo-four">
+
+    <img src="foto4.jpg.jpeg" 
+        alt="Memory 4">
+
+    <div class="photo-number">
+        04
+    </div>
+
+</div>
+
+
+<!-- FOTO 5 -->
+
+<div class="photo photo-five">
+
+    <img src="foto5.jpg.jpeg" 
+        alt="Memory 5">
+
+    <div class="photo-number">
+        05
+    </div>
+
+</div>
+
+
+<!-- FOTO 6 -->
+
+<div class="photo photo-six">
+
+    <img src="foto6.jpg.jpeg" 
+        alt="Memory 6">
+
+    <div class="photo-number">
+        06
+    </div>
+
+</div>
+
+
+<!-- FOTO 7 -->
+
+<div class="photo photo-seven">
+
+    <img src="foto7.jpg.jpeg" 
+        alt="Memory 7">
+
+    <div class="photo-number">
+        07
+    </div>
+
+</div>
+
+
+<!-- FOTO 8 -->
+
+<div class="photo photo-eight">
+
+    <img src="foto8.jpg.jpeg" 
+        alt="Memory 8">
+
+    <div class="photo-number">
+        08
+    </div>
+
+</div>
+
+
+<!-- FOTO 9 -->
+
+<div class="photo photo-nine">
+
+    <img src="foto9.jpg.jpeg" 
+        alt="Memory 9">
+
+    <div class="photo-number">
+        09
+    </div>
+
+</div>
+
+
+            <button class="next-button" onclick="showVideo()">
+                WATCH OUR VIDEO →
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         VIDEO PAGE
+    ================================================== -->
+
+    <section id="videoPage" class="page hidden">
+
+        <div id="flowerRainVideo"></div>
+
+
+        <div class="video-hirono">
+            <img src="https://prod-america-res.popmart.com/default/20231222_173151_302747__1200x1200.jpg" alt="Hirono">
+        </div>
+
+
+        <div class="video-content">
+
+            <p class="mini-text">
+                A SPECIAL MEMORY
+            </p>
+
+
+            <h2>
+                A Moment
+                <br>
+                <span>For You.</span>
+            </h2>
+
+
+            <p class="video-description">
+                Beberapa momen yang mungkin akan selalu
+                menjadi bagian dari cerita kita.
+            </p>
+
+
+            <!-- VIDEO -->
+
+            <div class="video-wrapper">
+
+                <video id="memoryVideo"
+                    controls
+                    playsinline
+                    preload="metadata">
+
+                    <source src="kenangan.mp4.mp4"
+                        type="video/mp4">
+
+                    Browser kamu tidak mendukung
+                    pemutaran video.
+
+                </video>
+
+            </div>
+
+
+            <p class="video-note">
+                🎧 Nyalakan suara untuk mendengarkan
+                kenangannya.
+            </p>
+
+
+            <button class="next-button"
+                onclick="showFinal()">
+
+                ONE LAST MESSAGE →
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         FINAL PAGE
+    ================================================== -->
+
+    <section id="finalPage" class="page hidden">
+
+        <div id="flowerRainFinal"></div>
+
+
+        <div class="final-hirono">
+            <img src="https://prod-eurasian-res.popmart.com/default/20241114_151137_055699____1_____1200x1200.jpg?x-oss-process=image/resize,p_40,format,webp,format,webp" alt="Hirono">
+        </div>
+
+
+        <div class="final-content">
+
+            <div class="final-hearts">
+                ♡
+            </div>
+
+
+            <p class="mini-text">
+                ONE LAST THING
+            </p>
+
+
+            <h1>
+                May all your
+                <br>
+                <span>dreams come true.</span>
+            </h1>
+
+
+            <p class="final-message">
+
+                Semoga setiap langkahmu membawa
+                kamu lebih dekat dengan apa yang
+                kamu impikan.
+
+                <br><br>
+
+                Semoga kamu selalu menemukan
+                alasan untuk tersenyum, tertawa dan selalu bahagia.
+
+                <br><br>
+
+                Dan semoga tahun ini menjadi
+                salah satu tahun terbaik dalam hidupmu.
+
+            </p>
+
+
+            <div class="final-divider"></div>
+
+
+            <h3>
+                Happy Birthday Sayang❤️
+            </h3>
+
+
+            <p class="small-final">
+                Made especially for you.
+            </p>
+
+
+            <button class="restart-button"
+                onclick="restartWebsite()">
+
+                ↻ WATCH AGAIN
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
