@@ -1,0 +1,1553 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #0a060d;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --bg: #0a060d;
+
+    --bg2: #120913;
+
+    --pink: #e5a9d1;
+
+    --pink-light: #f4c7e3;
+
+    --pink-dark: #9b557f;
+
+    --white: #fffaff;
+
+    --text: #cfc4d1;
+
+    --border: rgba(229, 169, 209, .25);
+
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(100, 45, 95, .18),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #110813,
+            #07050a
+        );
+
+}
+
+
+.page.hidden {
+
+    display: none;
+
+}
+
+
+.page.active {
+
+    display: flex;
+
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.mini-text {
+
+    color: #d8b3ce;
+
+    font-size: 12px;
+
+    letter-spacing: 7px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 28px;
+
+}
+
+
+h1,
+h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-weight: 400;
+
+}
+
+
+h1 span,
+h2 span {
+
+    color: var(--pink);
+
+    font-style: italic;
+
+}
+
+
+/* =====================================================
+   FLOWER RAIN
+===================================================== */
+
+#flowerRain,
+#flowerRainGift,
+#flowerRainBirthday,
+#flowerRainMemories,
+#flowerRainVideo,
+#flowerRainFinal {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 2;
+
+}
+
+
+.flower {
+
+    position: absolute;
+
+    top: -60px;
+
+    color: #e5a9d1;
+
+    opacity: .8;
+
+    animation:
+        flowerFall linear forwards;
+
+    text-shadow:
+        0 0 12px rgba(229,169,209,.5);
+
+}
+
+
+@keyframes flowerFall {
+
+    0% {
+
+        transform:
+            translate3d(
+                0,
+                -70px,
+                0
+            )
+            rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+
+    10% {
+
+        opacity: .9;
+
+    }
+
+
+    50% {
+
+        transform:
+            translate3d(
+                40px,
+                50vh,
+                0
+            )
+            rotate(160deg);
+
+    }
+
+
+    100% {
+
+        transform:
+            translate3d(
+                -30px,
+                115vh,
+                0
+            )
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+.stars {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.5) 1px,
+            transparent 2px
+        );
+
+    background-size:
+        110px 110px;
+
+    opacity: .25;
+
+}
+
+
+/* =====================================================
+   OPENING
+===================================================== */
+
+#opening {
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.opening-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(950px, 90%);
+
+    margin-left: 80px;
+
+}
+
+
+.opening-content h1 {
+
+    font-size:
+        clamp(70px, 8vw, 135px);
+
+    line-height: .78;
+
+    margin-bottom: 35px;
+
+    letter-spacing: -3px;
+
+}
+
+
+.opening-content h1 span {
+
+    display: block;
+
+    margin-top: 12px;
+
+}
+
+
+.opening-description {
+
+    color: #b8aeba;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 55px;
+
+}
+
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-bottom: 50px;
+
+}
+
+
+.time-box {
+
+    width: 135px;
+
+    height: 135px;
+
+    border:
+        1px solid
+        rgba(229,169,209,.3);
+
+    background:
+        rgba(255,255,255,.025);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.time-box span {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 42px;
+
+}
+
+
+.time-box small {
+
+    margin-top: 7px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #b8aeba;
+
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.start-button,
+.next-button,
+.restart-button {
+
+    background:
+        rgba(255,255,255,.02);
+
+    color: white;
+
+    border:
+        1px solid
+        rgba(229,169,209,.5);
+
+    padding:
+        18px 38px;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    letter-spacing: 2px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: .4s;
+
+}
+
+
+.start-button span {
+
+    font-size: 20px;
+
+    margin-left: 20px;
+
+}
+
+
+.start-button:hover,
+.next-button:hover,
+.restart-button:hover {
+
+    background:
+        rgba(229,169,209,.12);
+
+    border-color:
+        var(--pink);
+
+    transform:
+        translateY(-4px);
+
+}
+
+
+/* =====================================================
+   HIRONO
+===================================================== */
+
+.hirono-decor {
+
+    position: absolute;
+
+    z-index: 4;
+
+    pointer-events: none;
+
+}
+
+
+.hirono-decor img {
+
+    width: 300px;
+
+    max-width: 25vw;
+
+    filter:
+        drop-shadow(
+            0 15px 25px
+            rgba(0,0,0,.55)
+        );
+
+}
+
+
+.hirono-left {
+
+    left: -30px;
+
+    bottom: -15px;
+
+}
+
+
+.hirono-right {
+
+    right: 30px;
+
+    bottom: 30px;
+
+    transform: scale(.55);
+
+    opacity: .8;
+
+}
+
+
+/* =====================================================
+   GIFT
+===================================================== */
+
+#giftPage {
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.gift-container {
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.gift-container h2 {
+
+    font-size: 80px;
+
+    line-height: .85;
+
+    margin-bottom: 50px;
+
+}
+
+
+.gift {
+
+    position: relative;
+
+    width: 220px;
+
+    height: 190px;
+
+    margin: auto;
+
+    cursor: pointer;
+
+    transition: .5s;
+
+}
+
+
+.gift:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.04);
+
+}
+
+
+.gift-box {
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 190px;
+
+    height: 130px;
+
+    left: 15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7e315e,
+            #c45e94,
+            #7e315e
+        );
+
+    border-radius: 3px;
+
+}
+
+
+.gift-lid {
+
+    position: absolute;
+
+    top: 35px;
+
+    left: 5px;
+
+    width: 210px;
+
+    height: 40px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #a74578,
+            #e18bb9,
+            #a74578
+        );
+
+    z-index: 3;
+
+    border-radius: 4px;
+
+}
+
+
+.gift-ribbon.vertical {
+
+    position: absolute;
+
+    width: 30px;
+
+    height: 155px;
+
+    background:
+        #eaa6cb;
+
+    left: 95px;
+
+    top: 38px;
+
+    z-index: 4;
+
+}
+
+
+.gift-ribbon.horizontal {
+
+    position: absolute;
+
+    width: 190px;
+
+    height: 20px;
+
+    background:
+        #eaa6cb;
+
+    left: 15px;
+
+    top: 90px;
+
+    z-index: 4;
+
+}
+
+
+.bow {
+
+    position: absolute;
+
+    width: 65px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #eaa6cb;
+
+    top: 5px;
+
+    z-index: 6;
+
+}
+
+
+.bow.left {
+
+    left: 47px;
+
+    transform:
+        rotate(25deg);
+
+}
+
+
+.bow.right {
+
+    right: 47px;
+
+    transform:
+        rotate(-25deg);
+
+}
+
+
+.click-text {
+
+    margin-top: 35px;
+
+    color: #b7aeb8;
+
+    font-size: 12px;
+
+}
+
+
+/* =====================================================
+   GIFT HIRONO
+===================================================== */
+
+.gift-hirono {
+
+    position: absolute;
+
+    right: 4%;
+
+    bottom: 4%;
+
+    z-index: 4;
+
+}
+
+
+.gift-hirono img {
+
+    width: 270px;
+
+    opacity: .9;
+
+}
+
+
+/* =====================================================
+   BIRTHDAY
+===================================================== */
+
+#birthdayPage {
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow-y: auto;
+
+}
+
+
+.birthday-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(850px, 90%);
+
+    padding: 80px 0;
+
+}
+
+
+.birthday-content h1 {
+
+    font-size: 105px;
+
+    line-height: .75;
+
+}
+
+
+.birthday-content h1 span {
+
+    display: block;
+
+}
+
+
+.birthday-line {
+
+    width: 80px;
+
+    height: 1px;
+
+    background: var(--pink);
+
+    margin: 40px auto;
+
+}
+
+
+.birthday-name {
+
+    color: #cfc4d1;
+
+    margin-bottom: 45px;
+
+}
+
+
+.birthday-name strong {
+
+    color: white;
+
+}
+
+
+.letter {
+
+    width: 100%;
+
+    padding: 45px;
+
+    text-align: left;
+
+    border:
+        1px solid
+        rgba(229,169,209,.25);
+
+    background:
+        rgba(255,255,255,.025);
+
+    color: #cfc4d1;
+
+    line-height: 1.9;
+
+    font-size: 14px;
+
+}
+
+
+.letter p {
+
+    margin-bottom: 22px;
+
+}
+
+
+.letter-ending {
+
+    text-align: center;
+
+    color: var(--pink);
+
+}
+
+
+.birthday-hirono {
+
+    position: absolute;
+
+    left: 2%;
+
+    bottom: 0;
+
+    z-index: 3;
+
+}
+
+
+.birthday-hirono img {
+
+    width: 310px;
+
+    max-width: 28vw;
+
+}
+
+
+/* =====================================================
+   MEMORIES
+===================================================== */
+
+#memoriesPage {
+
+    overflow-y: auto;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.memories-content {
+
+    width: min(1250px, 90%);
+
+    padding: 80px 0;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.memories-content h2 {
+
+    font-size: 82px;
+
+    line-height: .8;
+
+    margin-bottom: 55px;
+
+}
+
+
+.photo-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    width: 100%;
+
+}
+
+
+.photo {
+
+    position: relative;
+
+    background: #161018;
+
+    border:
+        7px solid
+        #f5eaf2;
+
+    padding: 0;
+
+    height: 260px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 40px
+        rgba(0,0,0,.4);
+
+    transition: .4s;
+
+}
+
+
+.photo:hover {
+
+    transform:
+        translateY(-8px)
+        scale(1.02);
+
+    z-index: 10;
+
+}
+
+
+.photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.photo-number {
+
+    position: absolute;
+
+    left: 12px;
+
+    bottom: 10px;
+
+    color: white;
+
+    font-size: 12px;
+
+    text-shadow:
+        0 2px 5px black;
+
+}
+
+
+/* ROTATIONS */
+
+.photo-one {
+
+    transform: rotate(-2deg);
+
+}
+
+
+.photo-two {
+
+    transform: rotate(1deg);
+
+}
+
+
+.photo-three {
+
+    transform: rotate(-1deg);
+
+}
+
+
+.photo-four {
+
+    transform: rotate(1.5deg);
+
+}
+
+
+.photo-five {
+
+    transform: rotate(-1deg);
+
+}
+
+
+.photo-six {
+
+    transform: rotate(1.5deg);
+
+}
+
+
+.photo-seven {
+
+    transform: rotate(-1.5deg);
+
+}
+
+
+.photo-eight {
+
+    transform: rotate(1deg);
+
+}
+
+
+.photo-nine {
+
+    transform: rotate(-2deg);
+
+}
+
+
+.memory-hirono {
+
+    position: absolute;
+
+    z-index: 3;
+
+    bottom: 20px;
+
+}
+
+
+.memory-hirono img {
+
+    width: 230px;
+
+    opacity: .85;
+
+}
+
+
+.memory-hirono-left {
+
+    left: 0;
+
+}
+
+
+.memory-hirono-right {
+
+    right: 0;
+
+}
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+#videoPage {
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow-y: auto;
+
+}
+
+
+.video-content {
+
+    width: min(850px, 90%);
+
+    padding: 70px 0;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+.video-content h2 {
+
+    font-size: 85px;
+
+    line-height: .8;
+
+    margin-bottom: 30px;
+
+}
+
+
+.video-description {
+
+    color: #bfb3c0;
+
+    margin-bottom: 35px;
+
+}
+
+
+.video-wrapper {
+
+    width: 100%;
+
+    border:
+        1px solid
+        rgba(229,169,209,.4);
+
+    background: #050306;
+
+    padding: 8px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.5);
+
+}
+
+
+.video-wrapper video {
+
+    width: 100%;
+
+    display: block;
+
+    max-height: 500px;
+
+}
+
+
+.video-note {
+
+    margin: 20px 0 30px;
+
+    color: #bdaebe;
+
+    font-size: 12px;
+
+}
+
+
+.video-hirono {
+
+    position: absolute;
+
+    right: 3%;
+
+    bottom: 0;
+
+    z-index: 3;
+
+}
+
+
+.video-hirono img {
+
+    width: 300px;
+
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+#finalPage {
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.final-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(700px, 90%);
+
+}
+
+
+.final-hearts {
+
+    font-size: 55px;
+
+    color: var(--pink);
+
+    margin-bottom: 20px;
+
+}
+
+
+.final-content h1 {
+
+    font-size: 85px;
+
+    line-height: .85;
+
+    margin-bottom: 35px;
+
+}
+
+
+.final-message {
+
+    color: #c6bac7;
+
+    line-height: 1.8;
+
+    font-size: 14px;
+
+}
+
+
+.final-divider {
+
+    width: 80px;
+
+    height: 1px;
+
+    background: var(--pink);
+
+    margin: 35px auto;
+
+}
+
+
+.final-content h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 35px;
+
+    font-weight: 400;
+
+}
+
+
+.small-final {
+
+    margin: 10px 0 30px;
+
+    color: #9e929f;
+
+    font-size: 11px;
+
+}
+
+
+.final-hirono {
+
+    position: absolute;
+
+    left: 4%;
+
+    bottom: 0;
+
+    z-index: 3;
+
+}
+
+
+.final-hirono img {
+
+    width: 330px;
+
+    max-width: 30vw;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+
+    .opening-content {
+
+        margin-left: 0;
+
+    }
+
+
+    .opening-content h1 {
+
+        font-size: 65px;
+
+    }
+
+
+    .opening-description {
+
+        font-size: 14px;
+
+    }
+
+
+    .countdown {
+
+        gap: 8px;
+
+    }
+
+
+    .time-box {
+
+        width: 75px;
+
+        height: 90px;
+
+    }
+
+
+    .time-box span {
+
+        font-size: 30px;
+
+    }
+
+
+    .time-box small {
+
+        font-size: 8px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .hirono-left {
+
+        opacity: .45;
+
+        left: -70px;
+
+    }
+
+
+    .hirono-right {
+
+        opacity: .35;
+
+        right: -80px;
+
+    }
+
+
+    .gift-container h2 {
+
+        font-size: 65px;
+
+    }
+
+
+    .birthday-content h1 {
+
+        font-size: 70px;
+
+    }
+
+
+    .birthday-hirono {
+
+        opacity: .25;
+
+        left: -80px;
+
+    }
+
+
+    .letter {
+
+        padding: 25px;
+
+        font-size: 13px;
+
+    }
+
+
+    .memories-content h2 {
+
+        font-size: 60px;
+
+    }
+
+
+    .photo-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+
+    }
+
+
+    .photo {
+
+        height: 190px;
+
+        border-width: 5px;
+
+    }
+
+
+    .memory-hirono {
+
+        opacity: .2;
+
+    }
+
+
+    .video-content h2 {
+
+        font-size: 65px;
+
+    }
+
+
+    .video-hirono {
+
+        opacity: .2;
+
+        right: -80px;
+
+    }
+
+
+    .final-content h1 {
+
+        font-size: 65px;
+
+    }
+
+
+    .final-hirono {
+
+        opacity: .2;
+
+        left: -80px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+
+    .mini-text {
+
+        font-size: 9px;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .opening-content h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .countdown {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .time-box {
+
+        width: 65px;
+
+        height: 75px;
+
+    }
+
+
+    .time-box span {
+
+        font-size: 25px;
+
+    }
+
+
+    .photo-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .photo {
+
+        height: 250px;
+
+    }
+
+
+    .birthday-content h1 {
+
+        font-size: 60px;
+
+    }
+
+}
